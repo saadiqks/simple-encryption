@@ -10,7 +10,7 @@ public class ROT13 {
 	
 	/**
 	 * This method encrypts text based on user input. Non-alphabetic symbols are ignored and
-	 * the text is returned in lower-case.
+	 * the text is returned in lowercase.
 	 */
 	public static void encrypt() {
 		
