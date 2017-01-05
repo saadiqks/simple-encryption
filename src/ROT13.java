@@ -10,7 +10,7 @@ public class ROT13 {
 	
 	/**
 	 * This method encrypts text based on user input. Non-alphabetic symbols are ignored and
-	 * the text is returned in lowercase.
+	 * the text is returned in lower-case.
 	 */
 	public static void encrypt() {
 		
@@ -72,6 +72,9 @@ public class ROT13 {
 		System.out.println(newText);
 	}
 	
+	/**
+	 * The user is prompted for input in the main() method.
+	 */
 	public static void main(String[] args) {
 		
 		char response = 0;

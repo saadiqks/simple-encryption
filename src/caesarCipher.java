@@ -2,13 +2,23 @@ package encryption;
 
 import java.util.Scanner;
 
+/**
+ * This class implements the Caesar cipher algorithm for encrypting and decrypting text based 
+ * on user input.
+ */
 public class caesarCipher {
 	
+	/**
+	 * This instance variable is how many letters the "shift" of the cipher is.
+	 */
 	private static int shift;
 	
+	/**
+	 * This method encrypts text based on user input. Non-alphabetic symbols are ignored and
+	 * the text is returned in lower-case.
+	 */
 	public static void encrypt() {
 		System.out.println("Enter text to encrypt:");
-		@SuppressWarnings("resource")
 		String toEncrypt = new Scanner(System.in).nextLine();
 		toEncrypt = toEncrypt.toLowerCase();
 
@@ -28,9 +38,13 @@ public class caesarCipher {
 		System.out.println(s);
 	}
 	
+	/**
+	 * This method decrypts text based on user input. Non-alphabetic symbols are ignored and
+	 * the text is returned in lower-case.
+	 */
 	public static void decrypt() {
 		System.out.println("Enter text to decrypt:");
-		@SuppressWarnings("resource")
+		
 		String toDecrypt = new Scanner(System.in).nextLine();
 		toDecrypt = toDecrypt.toLowerCase();
 
@@ -38,6 +52,7 @@ public class caesarCipher {
 		for (int i = 0; i < toDecrypt.length(); i++)
 		{
 			char c = (char) (toDecrypt.charAt(i) - shift);
+			
 			if (c < 'a') {
 				s += (char)(toDecrypt.charAt(i) + (26-shift));
 			}
@@ -51,6 +66,9 @@ public class caesarCipher {
 		System.out.println(s);
 	}
 
+	/**
+	 * The user is prompted for input in the main() method.
+	 */
 	public static void main(String[] args) {
 		
 		while (shift <= 0) {
