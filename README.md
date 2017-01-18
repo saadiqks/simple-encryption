@@ -4,4 +4,5 @@ The user input is encrypted using both schemes with the output returned in lower
 
 # legal
 This software is in the public domain. Anyone is free to use and distribute it for any purpose.
+
 simple-encryption is maintained by Saadiq Shaik.
